@@ -1,32 +1,45 @@
-# Prerequisites
-*.d
+#include <iostream>
+#include <locale.h>
+using namespace std;
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+int k,i;
 
-# Precompiled Headers
-*.gch
-*.pch
+int main(){
+	setlocale(LC_ALL,"Turkish");
+	cout<<"Bu program size girdiğiniz metinin anlamlı bir süslü şema ile yazmanıza yarayacaktır.\nDaha sonra "<<
+	"dilerseniz kopyalayıp youtube facebook gibi medyalarda yorumlara\nyapıştırabilirsiniz...\n\n";
+	
+	
+	int lenisim,x;
+	string isim;
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+	
 
-# Fortran module files
-*.mod
-*.smod
+	
+	cout<<"İstedğiniz metini girin:";
+	getline(cin,isim);//stringin tümünü okuyan ve dizide tutan araç
+	lenisim=isim.length();
+	for ( i=1 ; i<=lenisim ; i++ ){			 
+		for( k=0;k<i;k++){
+			cout<<isim[k];
+			
+		}cout<<endl;
+	}
+	
+	
+	
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+		for ( i=lenisim-1 ; i>=1 ; i--){			 
+		for( k=0;k<i;k++){
+			cout<<isim[k];
+			
+		}cout<<endl;
+	}
 
-# Executables
-*.exe
-*.out
-*.app
+
+
+
+return 0;}
+
+
+
